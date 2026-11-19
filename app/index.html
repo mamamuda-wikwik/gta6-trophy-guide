@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice City Trophy Guide — GTA VI (55 trophies)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+  <h1>Vice City Trophy Guide</h1>
+  <p class="lede">Every one of the 55 trophies — official names, descriptions and grades, a guide in our own words for each, a roadmap to the platinum, and a tracker that remembers what you earned. No online trophies. About 200 hours to the platinum.</p>
+  <div class="progress-wrap">
+    <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <p class="progress-grades" id="progressGrades"></p>
+  </div>
+  <p class="save-warning"><strong>Read this first:</strong> GTA VI has <strong>no mission replay and no New Game Plus</strong>. Keep a manual save at the start of every chapter and one before the final mission. One trophy is reported as possibly missable — <strong>Positive Mental Attitude</strong> (Lucia's balcony meditation in Chapter 1). Never use cheats on a trophy save: they switch off trophies and saving.</p>
+</header>
+
+<nav class="toolbar" aria-label="Guide controls">
+  <input id="search" type="search" placeholder="Search a trophy, mission or keyword…" autocomplete="off">
+  <div class="chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+  <label class="grade-label">Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="toggle"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+  <label class="toggle"><input id="earnedOnly" type="checkbox"> Earned only</label>
+  <div class="actions">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json"></label>
+    <button id="resetBtn" type="button">Reset</button>
+  </div>
+</nav>
+
+<main>
+  <section id="roadmap" aria-labelledby="roadmapTitle">
+    <h2 id="roadmapTitle">Roadmap to the platinum</h2>
+    <p class="section-note">Six stages, in order. Story first — everything outside the story stays available after the credits, including the side-story finales and the 100% checklist.</p>
+    <ol id="roadmapStages" class="roadmap"></ol>
+  </section>
+
+  <section id="listSection" aria-labelledby="listTitle">
+    <h2 id="listTitle">All 55 trophies</h2>
+    <p class="section-note" id="listCount"></p>
+    <div id="trophyList" class="trophy-list"></div>
+    <p id="emptyState" class="empty" hidden>No trophies match these filters. Try clearing the search or picking another kind.</p>
+  </section>
+</main>
+
+<footer>
+  <h2>Sources &amp; honesty notes</h2>
+  <p>Names, descriptions and grades are PlayStation's official trophy text. Every guide is written for this entry, in its own words, and cites its sources beside the trophy. The list itself is as Exophase and PSNProfiles listed it before this guide was written (cross-checked by PlanetGTA6). Method facts come from the launch-day guides linked beside each trophy — chiefly Output Lag's trophy list, GTA Zone, Six Shore, GGRecon and GTA Six Insider.</p>
+  <p>The game launched on 19 November 2026, so some methods are still unconfirmed: five trophies (In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There, Ten Pin) have no confirmed trigger yet, and the missable flag on Positive Mental Attitude is reported as possible, not confirmed. Those guides say so plainly and link the sources to check for updates.</p>
+  <p class="sources" id="sourceList"></p>
+  <p class="fineprint">Fan-made guide. Not affiliated with Rockstar Games, Sony or PlayStation. No Rockstar logo, artwork or game screenshots are used. Progress is saved only in your browser (localStorage); export and import keep it as a file. This guide runs fully offline.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
