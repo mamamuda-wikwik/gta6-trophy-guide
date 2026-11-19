@@ -1,8 +1,8 @@
 # gta6-trophy-guide
 
-![make.fun bounty](https://make.fun/badge/gta6-trophy-guide-01.svg)
-![rank](https://make.fun/badge/gta6-trophy-guide-01/mamamuda-wikwik/gta6-trophy-guide/rank.svg)
-![reward](https://make.fun/badge/gta6-trophy-guide-01/mamamuda-wikwik/gta6-trophy-guide/reward.svg)
+[![make.fun · gta6-trophy-guide-01](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![rank](https://make.fun/badge/gta6-trophy-guide-01/mamamuda-wikwik/gta6-trophy-guide/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![reward](https://make.fun/badge/gta6-trophy-guide-01/mamamuda-wikwik/gta6-trophy-guide/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 
 An offline guide and tracker for all 55 GTA VI PlayStation trophies: official names, descriptions and grades, a guide in our own words for every trophy, a six-stage roadmap to the platinum, a possibly-missable warning (Positive Mental Attitude), filters by kind and grade, search, a spoiler setting that hides story trophies until you earn them, and progress tracking saved in the browser (export/import as a file). No online trophies — about 200 hours to the platinum.
 
