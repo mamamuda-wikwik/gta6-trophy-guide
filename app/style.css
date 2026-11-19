@@ -1,0 +1,190 @@
+/* Vice City Trophy Guide — dark neon theme, system fonts only, no network. */
+:root {
+  --bg: #0d0b16;
+  --panel: #171327;
+  --panel2: #1e1836;
+  --line: #2c2450;
+  --text: #f2eefc;
+  --muted: #b3a8d6;
+  --pink: #ff2d78;
+  --cyan: #22d3ee;
+  --gold: #fbbf24;
+  --green: #34d399;
+  --platinum: #e5e7eb;
+  --silver: #cbd5e1;
+  --bronze: #d97706;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.55;
+}
+a { color: var(--cyan); }
+.hero {
+  padding: 28px 20px 20px;
+  background: linear-gradient(135deg, #2a0a3a 0%, #12082e 55%, #062a33 100%);
+  border-bottom: 3px solid var(--pink);
+}
+.hero h1 {
+  margin: 4px 0 8px;
+  font-size: 42px;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.eyebrow { margin: 0; color: var(--cyan); font-weight: 700; letter-spacing: 1px; font-size: 13px; text-transform: uppercase; }
+.lede { max-width: 860px; margin: 0 0 16px; color: #e6defa; }
+.progress-wrap { max-width: 860px; }
+.progress-line { display: flex; justify-content: space-between; font-weight: 700; }
+.progress-bar { height: 12px; background: #241d45; border-radius: 6px; overflow: hidden; margin: 6px 0; }
+.progress-bar > div { height: 100%; width: 0%; background: linear-gradient(90deg, var(--pink), var(--gold)); transition: width 0.3s; }
+.progress-grades { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.save-warning {
+  max-width: 860px;
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  background: #2b1608;
+  border: 1px solid #b45309;
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  font-size: 15px;
+}
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 20px;
+  background: #14102a;
+  border-bottom: 1px solid var(--line);
+}
+.toolbar input[type="search"] {
+  flex: 1 1 240px;
+  min-width: 200px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0d0b16;
+  color: var(--text);
+  font-size: 15px;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--pink); border-color: var(--pink); font-weight: 700; }
+.grade-label, .toggle { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); }
+select {
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0d0b16;
+  color: var(--text);
+  font-size: 14px;
+}
+.actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+button, .import-btn {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel2);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+}
+button:hover, .import-btn:hover { border-color: var(--pink); }
+.import-btn input { display: none; }
+main { max-width: 980px; margin: 0 auto; padding: 8px 20px 32px; }
+h2 { font-size: 24px; margin: 28px 0 6px; }
+.section-note { color: var(--muted); margin: 0 0 14px; }
+.roadmap { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.roadmap li {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--cyan);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.roadmap h3 { margin: 0 0 4px; font-size: 18px; }
+.roadmap h3 .stage-num { color: var(--cyan); margin-right: 6px; }
+.roadmap p { margin: 4px 0; }
+.roadmap .stage-trophies { margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.stage-trophies button {
+  padding: 3px 9px;
+  font-size: 13px;
+  border-radius: 999px;
+  background: #0d0b16;
+}
+.stage-trophies button.earned { border-color: var(--green); color: var(--green); text-decoration: line-through; }
+.trophy-list { display: grid; gap: 12px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+}
+.card.earned { border-color: var(--green); }
+.card.flash { outline: 3px solid var(--gold); outline-offset: 2px; }
+.card-top { display: flex; gap: 12px; align-items: flex-start; }
+.card-top input[type="checkbox"] { width: 22px; height: 22px; margin-top: 4px; accent-color: var(--green); flex: none; }
+.card-name { font-size: 19px; font-weight: 800; margin: 0; }
+.card-name .earned-mark { color: var(--green); font-size: 15px; }
+.card-desc { margin: 2px 0 0; color: var(--muted); font-style: italic; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #2c2450;
+  color: var(--text);
+}
+.badge.platinum { background: #e5e7eb; color: #111; }
+.badge.gold { background: var(--gold); color: #111; }
+.badge.silver { background: var(--silver); color: #111; }
+.badge.bronze { background: var(--bronze); color: #fff; }
+.badge.missable { background: #7f1d1d; color: #fecaca; }
+.badge.hidden-badge { background: #312e81; color: #c7d2fe; }
+.badge.unconfirmed { background: #78350f; color: #fde68a; }
+.card-guide { margin: 12px 0 0; }
+.card-guide p { margin: 0 0 8px; }
+.card-steps { margin: 0 0 8px; padding-left: 20px; }
+.card-steps li { margin: 2px 0; }
+.card-count { font-weight: 700; color: var(--gold); }
+.missable-note {
+  margin: 8px 0;
+  padding: 10px 12px;
+  background: #2b1608;
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+}
+.card-sources { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+.card-sources a { margin-right: 10px; }
+.spoiled .card-name, .spoiled .card-desc, .spoiled .card-guide, .spoiled .card-steps, .spoiled .card-sources { display: none; }
+.spoiled .spoiler-note { display: block; }
+.spoiler-note { display: none; color: var(--muted); font-style: italic; margin: 8px 0 0; }
+.empty { color: var(--muted); font-style: italic; }
+footer { max-width: 980px; margin: 0 auto; padding: 0 20px 40px; color: var(--muted); }
+footer h2 { color: var(--text); }
+.sources { font-size: 14px; }
+.sources a { margin-right: 12px; }
+.fineprint { font-size: 13px; }
+@media (max-width: 640px) {
+  .hero h1 { font-size: 30px; }
+  .toolbar { position: static; }
+}
