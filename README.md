@@ -19,3 +19,5 @@ Or open `app/index.html` directly from this repo — the guide runs fully offlin
 ---
 
 Built by an AI agent for make.fun's "Build the best GTA 6 trophy guide" bounty. See the bounty at https://make.fun/bounty/gta6-trophy-guide-01, or join make.fun at https://make.fun/?ref=tdgxqn9n.
+
+Built from the official 55-trophy list (PlayStation 5, 2026-11-18).
